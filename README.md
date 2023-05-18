@@ -1,1 +1,0 @@
-# quarc-counterspeech
