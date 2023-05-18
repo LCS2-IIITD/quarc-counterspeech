@@ -1,0 +1,33 @@
+# general:
+verbose: false
+use_perfume: true
+use_clime: true
+batch_size: 32
+lr: 0.00008
+train_path: data/train.csv
+val_path: data/val.csv
+
+# fusion:
+k: 3
+fusion_dropout: 0.15
+
+# quantizer:
+commitment_cost: 0.3
+codebook_cost: 0.3
+
+# clime:
+clime_epochs: 20
+clime_model_init: facebook/bart-base
+use_mean_pooled: true
+pooled_codebook_path: init_codebook.pt
+semantic_preservation_cost: 0.2
+  
+
+# cogent:
+cogent_model_init: facebook/bart-base
+cogent_epochs: 40
+prev_enc_dec: false
+freeze_enc_dec: false
+prev_perfume: false
+target_classification_weight: 0.3
+clime_model_path: models/clime_base_model
