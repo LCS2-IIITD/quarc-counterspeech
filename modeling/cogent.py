@@ -25,7 +25,7 @@ from torch.nn import TransformerEncoder, TransformerEncoderLayer
 from .quantizer import VectorQuantizer
 from .classification_head import BartClassificationHead
 from .perfume import PerFuMe
-from .standard_fusion import SimpleFusion
+# from .standard_fusion import SimpleFusion
 from .hf_utils import BaseModelOutput
 from .positional_encoding import PositionalEncoding
 
@@ -62,8 +62,7 @@ class COGENTEncoder(BartPretrainedModel):
             else:
                 self.fusion=fusion
         else:
-            print('[INFO] Using Simple Fusion mechanism!')
-            self.fusion = SimpleFusion(config.d_model, config.d_model)
+            self.fusion = None
 
         self._init_weights(self.target_classifier.dense)
         self._init_weights(self.target_classifier.out_proj)
