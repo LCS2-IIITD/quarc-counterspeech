@@ -137,12 +137,11 @@ termcolor==2.1.1
 thinc==8.1.5
 threadpoolctl==3.1.0
 tokenizers==0.13.2
-torch==1.13.0
-torchvision==0.14.0
+torch==1.9.0
 tornado==6.2
 tqdm==4.64.1
 traitlets==5.7.0
-transformers==4.25.1
+transformers==4.18.0
 typer==0.7.0
 typing_extensions==4.4.0
 umap-learn==0.5.3
